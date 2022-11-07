@@ -234,24 +234,24 @@
 
    - name: Composer install
      community.general.composer:
-       command: install
+       command: install 
        working_dir: "{{ working_directory}}"
      environment:
-        COMPOSER_ALLOW_USER: 1
+        COMPOSER_ALLOW_SUPERUSER: 1
 
    - name: Composer update
      community.general.composer:
-       command: update
+       command: update 
        working_dir: "{{ working_directory}}"
      environment:
-        COMPOSER_ALLOW_USER: 1
+        COMPOSER_ALLOW_SUPERUSER: 1
 
    - name: Composer create project
      community.general.composer:
-       command: create-project
+       command: create-project 
        working_dir: "{{ working_directory }}"
      environment:
-        COMPOSER_ALLOW_USER: 1
+        COMPOSER_ALLOW_SUPERUSER: 1
 
    - name: Set up app storage link
      shell: php "{{ working_directory }}"/artisan storage:link
